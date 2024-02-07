@@ -16,7 +16,38 @@ function calculateMoney(ticketSale) {
 
 }
 
-console.log(calculateMoney(10));
-console.log(calculateMoney(1055));
-console.log(calculateMoney(93));
-console.log(calculateMoney(-130));
+// console.log(calculateMoney(10));
+// console.log(calculateMoney(1055));
+// console.log(calculateMoney(93));
+// console.log(calculateMoney(-130));
+
+
+
+// Problem-02: Good Name , Bad Name
+
+function checkName(name) {
+    
+}
+
+
+// Problem 03 : Virus in my Array
+
+function deleteInvalids(array) {
+    
+}
+
+
+
+
+// Problem 04 : Make A Great Password
+
+function password(obj) {
+    
+}
+
+
+// Problem 05 : Monthly Savings of a Freelancer
+
+function monthlySavings(arr , livingCost) {
+    
+}
