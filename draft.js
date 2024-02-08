@@ -137,3 +137,64 @@ console.log(monthlySavings(payments ,Living ));
 //         return savings;
 //     }
 // console.log(monthlySavings(payments ,Living ));
+
+
+// Problem 04 : Make A Great Password
+const siteName = { name: 'kolimuddin' , birthYear: 1999 , siteName: 'google' }
+function password(obj) {
+    console.log(obj);
+}
+console.log(password(siteName));
+// console.log(siteName);
+
+
+// 02
+
+function password(obj) {
+    const passFirst = obj.siteName;
+    // const passUpper = passFirst.
+    // return passFirst;
+    const passSecond = '#';
+    const passThird = obj.name;
+    const passForth = '@';
+    const passLast = obj.birthYear;
+    const passwordCreate = passFirst.concat(passSecond).concat(passThird).concat(passForth).concat(passLast);
+    return passwordCreate;
+}
+console.log(password(siteName));
+
+
+
+03
+
+const siteName = { name: 'kolimuddin' , birthYear: 1999 , siteName: 'google' }
+function password(obj) {
+    const passFirst = obj.siteName;
+    const passToupper = passFirst.charAt(0).toUpperCase()+passFirst.slice(1);
+    const passSecond = '#';
+    const passThird = obj.name;
+    const passForth = '@';
+    const passLast = obj.birthYear;
+    const passwordCreate = passToupper.concat(passSecond).concat(passThird).concat(passForth).concat(passLast);
+    return passwordCreate;
+}
+console.log(password(siteName));
+
+// 04/ finally
+
+function password(obj) {
+    if (typeof obj !== 'object' ) {
+        return ' To provide object property value';
+    }
+    else if (Object.keys(obj).length < 3 || obj.birthYear.toString().length < 4) {
+        return 'invalid';
+    }
+    const passFirst = obj.siteName;
+    const passToupper = passFirst.charAt(0).toUpperCase()+passFirst.slice(1);
+    const passSecond = '#';
+    const passThird = obj.name;
+    const passForth = '@';
+    const passLast = obj.birthYear;
+    const passwordCreate = passToupper.concat(passSecond).concat(passThird).concat(passForth).concat(passLast);
+    return passwordCreate;
+}
