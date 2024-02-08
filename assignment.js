@@ -23,18 +23,63 @@ function calculateMoney(ticketSale) {
 
 // Problem-02: Good Name , Bad Name
 
+const name1 = "rafi";
+const name2 = "RAFEE";
+const name3 = "Jhankar";
+const name4 = 199;
+const name5 = ["Rashed"];
+
 function checkName(name) {
-    
+    if ( typeof name !== 'string') {
+        return 'invalid';
+    }
+    const lastletterContain = 'A,y,i,e,o,u,w'
+    const letterTolower = lastletterContain.toLowerCase();
+    const inputName = name.toLowerCase();
+    const lengthLastlettername = inputName[inputName.length - 1];
+    const lastLetterName = letterTolower.split(',');
+    for ( let contain of lastLetterName){
+        if (contain === lengthLastlettername) {
+            return 'Good Name'      
+        }
+    }
+    return 'Bad Name';
 }
+console.log(checkName(name2));
+
+
+
+
+
 
 
 // Problem 03 : Virus in my Array
 
 function deleteInvalids(array) {
-    
+    if(!Array.isArray(array)){
+        return "Invalid Array. Please Input valid Array!"
+    }
+    let newarrayCreat = [];
+    for(let numbers of array){
+        if(typeof numbers === 'number' && !isNaN(numbers)){
+            newarrayCreat.push(numbers)
+        }
+    }
+    return newarrayCreat;
 }
 
 
+///Checking Part (OnlyMe)
+const array = [1 , null, undefined, 18, -19, NaN, "12", [1, 2], { ob: "lala" }];
+const array2 = ["1" , {num:2} , NaN ] ;
+const array3 = [ 1 , 2 , -3 ] ;
+const array4 = {num: [ 1 , 2 , 3 ]};
+const array5 =  [ NaN, 1,12,0 ,-1 , undefined ];
+// console.log(deleteInvalids(array))
+// console.log(deleteInvalids(array2))
+// console.log(deleteInvalids(array3))
+// console.log(deleteInvalids(array4))
+// console.log(deleteInvalids(array5))
 
 
 // Problem 04 : Make A Great Password
