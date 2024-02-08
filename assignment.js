@@ -47,7 +47,27 @@ function password(obj) {
 
 
 // Problem 05 : Monthly Savings of a Freelancer
+const payments  = 5400 ;
+const Living = [ 1000 , 2000 , 3000 ];
 
 function monthlySavings(arr , livingCost) {
-    
-}
+    if (typeof arr !== 'object' && typeof livingCost !== 'number') {
+        return 'invalid input';
+    }
+    else{
+        if (savings < 0) {
+            return  'earn more';
+        }   
+        let sum = 0;
+    for ( const income of arr){
+        let tax = 0;
+        if (income >= 3000) {
+            tax = income * 0.2;           
+        }
+        sum = sum + income - tax;
+        }
+        const savings = sum - livingCost;
+        return savings;     
+    }
+    }
+console.log(monthlySavings(payments ,Living ));
